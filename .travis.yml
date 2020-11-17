@@ -9,7 +9,7 @@ env:
 components:
   - build-tools-25.0.2
   - android-16
- 
+
 
 before_script:
   - android list targets
