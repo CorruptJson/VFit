@@ -5,10 +5,10 @@ env:
     - TERM=dumb
   matrix:
     - ANDROID_TARGET=android-16 ANDROID_ABI=armeabi-v7a
-
-components:
-  - build-tools-25.0.2
-  - android-16
+android:
+  components:
+    - build-tools-25.0.2
+    - android-16
 
 
 before_script:
