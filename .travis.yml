@@ -4,11 +4,12 @@ env:
   global:
     - TERM=dumb
   matrix:
-    - ANDROID_TARGET=android-16 ANDROID_ABI=google_apis/armeabi-v7a
+    - ANDROID_TARGET=android-16 ANDROID_ABI=armeabi-v7a
 android:
   components:
     - build-tools-25.0.2
     - android-16
+    - sys-img-armeabi-v7a-android-16
 
 
 before_script:
