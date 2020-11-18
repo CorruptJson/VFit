@@ -22,7 +22,4 @@ jobs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 16
-        script: ./client/gradlew connectedCheck
-    - name: Android Test Report
-      uses: asadmansr/android-test-report-action@v1.2.0
-      if: ${{ always() }} # IMPORTANT: run Android Test Report regardless
+        script: ./client/gradlew connectedAndroidTest
