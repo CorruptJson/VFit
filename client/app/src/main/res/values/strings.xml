@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">VFit</string>
+    <string name="vfit_title">V-Fit</string>
+    <string name="login_heading">Login</string>
+    <string name="register_heading">Register</string>
+    <string name="email_input">Email</string>
+    <string name="password_input">Password</string>
+    <string name="name_input">Full Name</string>
+    <string name="create_acc">Create Account</string>
+    <string name="account_tip">Don\'t have an account?</string>
+    <string name="confirm_password_input">Confirm Password</string>
 </resources>
