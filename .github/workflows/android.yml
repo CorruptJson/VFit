@@ -9,9 +9,6 @@ on:
 jobs:
   UITest:
     runs-on: macos-latest
-    defaults:
-      run:
-        working-directory: client
     steps:
     - uses: actions/checkout@v2
     - name: set up JDK 1.8
@@ -22,4 +19,5 @@ jobs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 16
-        script: ./client/gradlew connectedAndroidTest
+        script: ./gradlew connectedAndroidTest
+        working-directory: ./client
