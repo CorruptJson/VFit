@@ -30,7 +30,9 @@ app.use("/auth", auth)
 
 
 
-
+app.get("/", (req, res) => {
+  res.send("V-Fit Server is Online!")
+})
 
 
 app.listen(port, console.log(`Server is up on the port ${port}, with PID: ${process.pid}`))
