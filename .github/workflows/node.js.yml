@@ -10,15 +10,14 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  UnitTest:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: server
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v2
