@@ -5,6 +5,9 @@ const session = require('client-sessions')
 
 
 /**** Constants ***/
+
+const app = express()
+
 const port = process.env.PORT || 8080
 const sessionSecret = process.env.SESSION_SECRET
 
@@ -19,5 +22,4 @@ const sessionSecret = process.env.SESSION_SECRET
 
 
 
-
-express().listen(port, console.log(`Server is up on the port ${port}, with PID: ${process.pid}`))
+app.listen(port, console.log(`Server is up on the port ${port}, with PID: ${process.pid}`))
