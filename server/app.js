@@ -4,6 +4,12 @@ const bodyParser = require('body-parser')
 const session = require('client-sessions')
 
 
+
+/****  Project scripts ***/
+const auth = require('./services/auth.js')
+
+
+
 /**** Constants ***/
 
 const app = express()
