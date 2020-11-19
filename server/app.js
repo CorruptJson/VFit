@@ -1,24 +1,29 @@
 /**** Node Modules ***/
 const express = require('express')
-const bodyParser = require('body-parser')
 const session = require('client-sessions')
 
 
 
 /****  Project scripts ***/
-const auth = require('./services/auth.js')
+const middlewares = require('./utils/middlewares.js')
+const auth = require('./controllers/auth.controller.js')
+
 
 
 
 /**** Constants ***/
 
-const app = express()
+const app = middlewares.app
 
 const port = process.env.PORT || 8080
 const sessionSecret = process.env.SESSION_SECRET
 
 
 
+
+
+/****  Routing ***/
+app.use("/auth", auth)
 
 
 

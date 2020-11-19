@@ -2,7 +2,7 @@
 const bcrypt = require('bcrypt')
 
 /****  Models ***/
-const authModel = require('../models/auth.js')
+const authModel = require('../models/auth.model.js')
 
 /****  Constants ***/
 SALTROUNDS = 14
@@ -19,7 +19,7 @@ const register = async (username, password) => {
     throw `Username must be between 0-32 characters`
   }
   try {
-    const dbPromise = await authModel.createUser(username, hashedPass)
+    return await authModel.createUser(username, hashedPass)
   }
 
   // errors handling for inserting row
@@ -33,13 +33,11 @@ const register = async (username, password) => {
     }
 
   }
-
-  return dbPromise
 }
 
 
 const login = async (username, password) => {
-  const user = await authModel.retrieveLogin(username)
+  const user = await authModel.retrieveUser(username)
   try {
     const match = await bcrypt.compare(password, user[0].password)
     if (!match) throw "Invalid Login"
@@ -57,9 +55,6 @@ const login = async (username, password) => {
 
 
 
-
-
-login('user', 'password').then(e => console.log(e)).catch(e => console.log(e))
 
 module.exports = {
   register,
