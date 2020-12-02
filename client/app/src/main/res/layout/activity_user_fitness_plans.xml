@@ -66,9 +66,10 @@
 
     <TextView
         android:id="@+id/weekText"
-        android:layout_width="wrap_content"
+        android:layout_width="35dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:gravity="center"
         android:text="Week"
         android:textColor="@android:color/black"
         android:textStyle="bold"
