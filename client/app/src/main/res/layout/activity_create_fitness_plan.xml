@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/cardview_dark_background"
+    tools:context=".CreateFitnessPlan"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Routine Name"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="#FFFFFF"/>
+
+
+    <EditText
+        android:id="@+id/Rmonday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Monday Routine"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <EditText
+        android:id="@+id/Rtuesday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Tuesday Routine"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <EditText
+        android:id="@+id/Rwednesday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Wednesday Routine"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <EditText
+        android:id="@+id/Rthursday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Thursday Routine"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <EditText
+        android:id="@+id/Rfriday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Friday Routine"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <EditText
+        android:id="@+id/Mmonday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Monday Meal"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <EditText
+        android:id="@+id/Mtuesday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Tuesday Meal"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <EditText
+        android:id="@+id/Mwednesday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Wednesday Meal"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <EditText
+        android:id="@+id/Mthursday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Thursday Meal"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <EditText
+        android:id="@+id/Mfriday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Friday Meal"
+        android:inputType="text"
+        android:padding="10dp"></EditText>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create" />
+
+
+</LinearLayout>
