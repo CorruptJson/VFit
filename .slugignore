@@ -1,0 +1,6 @@
+# Ignore file for Heroku
+/.github
+/client
+/tests
+.gitignore
+schema.sql
