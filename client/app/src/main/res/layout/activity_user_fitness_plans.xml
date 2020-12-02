@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserFitnessPlans">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_fitness_plans_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/user_fitness_plans_container"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="69dp"
+        android:layout_height="100dp"
+        android:background="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fitness Plan"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toBottomOf="@+id/trainerText" />
+
+    <TextView
+        android:id="@+id/trainerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Trainer's"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background" />
+
+    <TextView
+        android:id="@+id/weekText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Week"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@+id/container" />
+
+    <Button
+        android:id="@+id/datePrevious"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center|top"
+        android:text="\u2190"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/weekText"
+        app:layout_constraintTop_toTopOf="@+id/container" />
+
+    <Button
+        android:id="@+id/dateNext"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="center|top"
+        android:text="\u2192"
+        app:layout_constraintStart_toEndOf="@+id/weekText"
+        app:layout_constraintTop_toTopOf="@+id/container" />
+
+    <ScrollView
+        android:id="@+id/containerScrollView"
+        android:layout_width="360dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@+id/container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/routineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="5dp"
+        android:text="Routines"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/routineContainer"
+        app:layout_constraintStart_toStartOf="@+id/container" />
+
+    <View
+        android:id="@+id/routineContainer"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/user_fitness_plans_background"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@+id/container" />
+
+    <ScrollView
+        android:id="@+id/routineScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/routineContainer"
+        app:layout_constraintEnd_toEndOf="@+id/routineContainer"
+        app:layout_constraintStart_toStartOf="@+id/routineContainer"
+        app:layout_constraintTop_toTopOf="@+id/routineContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/mondayRoutineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monday" />
+
+            <Button
+                android:id="@+id/tuesdayRoutineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tuesday" />
+
+            <Button
+                android:id="@+id/wednesdayRoutineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wednesday" />
+
+            <Button
+                android:id="@+id/thursdayRoutineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thursday" />
+
+            <Button
+                android:id="@+id/fridayRoutineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Friday " />
+
+            <Button
+                android:id="@+id/saturdayRoutineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saturday " />
+
+            <Button
+                android:id="@+id/sundayRoutineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sunday" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/mealText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="5dp"
+        android:text="Meal Plan"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/mealContainer"
+        app:layout_constraintStart_toStartOf="@+id/container" />
+
+    <View
+        android:id="@+id/mealContainer"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/user_fitness_plans_background"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container" />
+
+    <ScrollView
+        android:id="@+id/mealScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mealContainer"
+        app:layout_constraintEnd_toEndOf="@+id/mealContainer"
+        app:layout_constraintStart_toStartOf="@+id/mealContainer"
+        app:layout_constraintTop_toTopOf="@+id/mealContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/mondayMealButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monday" />
+
+            <Button
+                android:id="@+id/tuesdayMealButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tuesday" />
+
+            <Button
+                android:id="@+id/wednesdayMealButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wednesday" />
+
+            <Button
+                android:id="@+id/thursdayMealButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thursday" />
+
+            <Button
+                android:id="@+id/fridayMealButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Friday " />
+
+            <Button
+                android:id="@+id/saturdayMealButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saturday " />
+
+            <Button
+                android:id="@+id/sundayMealButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sunday" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
