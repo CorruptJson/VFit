@@ -57,8 +57,8 @@ public class UserFitnessPlans extends AppCompatActivity {
     }
 
     public void returnMenu() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        setResult(RESULT_OK);
+        finish();
     }
 
     public void nextWeek() {
