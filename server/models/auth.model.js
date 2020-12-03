@@ -1,4 +1,4 @@
-const { runQuery, pool } = require('../utils/database.js')
+const { runQuery } = require('../utils/database.js')
 
 
 

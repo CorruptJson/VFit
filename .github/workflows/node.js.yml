@@ -32,3 +32,11 @@ jobs:
       env:
         DATABASE_URL: ${{secrets.DATABASE_URL}}
 
+  ESLint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Lint
+        run: npm run lint
+
+
