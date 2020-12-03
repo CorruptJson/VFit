@@ -1,7 +1,4 @@
 /**** Node Modules ***/
-const express = require('express')
-const session = require('client-sessions')
-
 
 
 /****  Project scripts ***/
@@ -10,13 +7,11 @@ const auth = require('./controllers/auth.controller.js')
 
 
 
-
 /**** Constants ***/
 
 const app = middlewares.app
 
 const port = process.env.PORT || 8080
-const sessionSecret = process.env.SESSION_SECRET
 
 
 
