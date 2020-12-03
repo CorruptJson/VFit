@@ -10,7 +10,7 @@
     },
 
     "extends": "eslint:recommended",
-
+    "ignorePatterns": ["node_modules/*"],
     "rules": {
     }
 }
