@@ -1,9 +1,11 @@
 package com.example.vfit;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -13,6 +15,7 @@ public class MyFitnessPlansActivity extends AppCompatActivity {
 
     LinearLayout planList;
     ImageButton addButton;
+    private static final int CREATE_FITNESS_PLAN = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,12 +30,29 @@ public class MyFitnessPlansActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MyFitnessPlansActivity.this, CreateFitnessPlan.class));
+                startActivityForResult(new Intent(MyFitnessPlansActivity.this, CreateFitnessPlan.class),CREATE_FITNESS_PLAN);
             }
         });
     }
 
-    public void newPlan(){
-        planList.addView(new TrainerPlansView(this, "crusher"));
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == CREATE_FITNESS_PLAN && resultCode == RESULT_OK){
+            newPlan(data.getStringExtra("Routine Name"));
+        }
+        Log.d("Request Code", "R= " + requestCode);
+        System.out.println("Hello");
+    }
+
+    public void newPlan(String text){
+        TrainerPlansView plan = new TrainerPlansView(this,text);
+        plan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MyFitnessPlansActivity.this,UserFitnessPlans.class));
+            }
+        });
+        planList.addView(plan);
     }
 }

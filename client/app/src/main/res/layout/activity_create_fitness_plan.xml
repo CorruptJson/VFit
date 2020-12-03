@@ -9,13 +9,15 @@
     android:background="@color/cardview_dark_background"
     tools:context=".CreateFitnessPlan"
     >
+
     <EditText
+        android:id="@+id/routine_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:hint="Routine Name"
-        android:padding="10dp"
         android:inputType="text"
-        android:background="#FFFFFF"/>
+        android:padding="10dp" />
 
 
     <EditText
@@ -109,7 +111,7 @@
         android:padding="10dp"></EditText>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/create"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Create" />

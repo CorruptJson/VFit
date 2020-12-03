@@ -1,0 +1,21 @@
+{
+  "name": "vfit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && npm start",
+    "test": "cd server && npm test",
+    "postinstall": "cd server && npm ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonZFHuang/VFit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonZFHuang/VFit/issues"
+  },
+  "homepage": "https://github.com/JasonZFHuang/VFit#readme"
+}
