@@ -3,7 +3,7 @@
 
 /****  Project scripts ***/
 const middlewares = require('./utils/middlewares.js')
-const auth = require('./controllers/auth.controller.js');;;;;;;;
+const auth = require('./controllers/auth.controller.js')
 
 
 
