@@ -3,6 +3,7 @@
     <string name="vfit_title">V-Fit</string>
     <string name="login_heading">Login</string>
     <string name="register_heading">Register</string>
+    <string name="username_input">Username</string>
     <string name="email_input">Email</string>
     <string name="password_input">Password</string>
     <string name="name_input">Full Name</string>
