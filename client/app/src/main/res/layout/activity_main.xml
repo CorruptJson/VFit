@@ -19,13 +19,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/emailInput"
+        android:id="@+id/userInput"
         android:layout_width="240dp"
         android:layout_height="40dp"
         android:layout_marginBottom="15dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/email_input"
+        android:hint="@string/username_input"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/passwordInput"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login_heading"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/emailInput"
+        app:layout_constraintBottom_toTopOf="@+id/userInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,5 +80,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/warningLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="23dp"
+        android:text="@string/warning"
+        app:layout_constraintBottom_toTopOf="@+id/accLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
