@@ -3,7 +3,6 @@ package com.example.vfit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -18,7 +17,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void register(View view) {
         // take user to main screen after registering account details
         EditText name = (EditText) findViewById(R.id.nameInput);
-        EditText email = (EditText) findViewById(R.id.emailInput);
+        EditText email = (EditText) findViewById(R.id.userInput);
         EditText password = (EditText) findViewById(R.id.passwordInput);
         EditText confirmPassword = (EditText) findViewById(R.id.confirmPasswordInput);
 

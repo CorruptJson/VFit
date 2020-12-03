@@ -15,6 +15,7 @@ public class MyFitnessPlansActivity extends AppCompatActivity {
 
     LinearLayout planList;
     ImageButton addButton;
+    ImageButton backButton;
     private static final int CREATE_FITNESS_PLAN = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,14 @@ public class MyFitnessPlansActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_fitness_plans2);
 
         planList = findViewById(R.id.PlanList);
+        backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_OK);
+                finish();
+            }
+        });
         configureAddButton();
     }
 
@@ -41,8 +50,6 @@ public class MyFitnessPlansActivity extends AppCompatActivity {
         if(requestCode == CREATE_FITNESS_PLAN && resultCode == RESULT_OK){
             newPlan(data.getStringExtra("Routine Name"));
         }
-        Log.d("Request Code", "R= " + requestCode);
-        System.out.println("Hello");
     }
 
     public void newPlan(String text){
