@@ -6,7 +6,7 @@
     <string name="username_input">Username</string>
     <string name="email_input">Email</string>
     <string name="password_input">Password</string>
-    <string name="name_input">Full Name</string>
+    <string name="name_input">username</string>
     <string name="create_acc">Create Account</string>
     <string name="account_tip">Don\'t have an account?</string>
     <string name="confirm_password_input">Confirm Password</string>
