@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt')
 const authModel = require('../models/auth.model.js')
 
 /****  Constants ***/
-SALTROUNDS = 14
+const SALTROUNDS = 14;
 
 
 
