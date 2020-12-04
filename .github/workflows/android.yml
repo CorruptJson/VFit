@@ -22,7 +22,9 @@ jobs:
           disable-animations: true
           script: ./gradlew connectedAndroidTest --full-stacktrace
           working-directory: ./client
-          emulator-options: -no-window
+          arch: x86_64
+          profile: Nexus 6
+
 
   UnitTest:
     runs-on: ubuntu-latest
