@@ -20,7 +20,7 @@ jobs:
         with:
           api-level: 16
           disable-animations: true
-          script: ./gradlew connectedAndroidTest
+          script: ./gradlew connectedAndroidTest --stacktrace
           working-directory: ./client
 
   UnitTest:
